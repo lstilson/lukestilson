@@ -156,7 +156,7 @@ window.onload = function() {
 					});
 
 				// topContent.setAttribute("style", "max-height: 44px; opacity: 0;");
-				window.scrollTo(0, this.offsetTop + 470);
+				window.scrollTo(0, this.offsetTop + 420);
 				this.classList.add('active');
 				selectedItem = show;
 			}
@@ -164,7 +164,7 @@ window.onload = function() {
 	}
 
 	about.addEventListener("click", function(){
-		window.scrollTo(0, aboutSection.offsetTop + 50);
+		window.scrollTo(0, aboutSection.offsetTop - 50);
 	});
 
 		contactButton.addEventListener("click", function(){
