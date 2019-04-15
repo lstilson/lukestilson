@@ -132,7 +132,7 @@ p.tagline--small {
 p.tagline--white {
   padding-top: 0;
   font-size: 16px;
-  color: #555;
+  color: #fff;
   max-width: 530px;
   font-kerning: 5%;
   text-transform: none;
@@ -636,6 +636,7 @@ img.programLinks {
 	position: relative;
 	height: 100%;
 	right: 0;
+	display: flex;
 }
 
 .touchpoint__description {
@@ -936,4 +937,33 @@ h4 {
 
 .touchpoint__description::-webkit-scrollbar-thumb:hover {
   background: #1a1a1a; 
+}
+
+.flexy {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	align-self: center;
+	right: 13%;
+	bottom: 0;
+	position: absolute;
+}
+
+.flexy--image {
+	position: relative;
+	width: 140px;
+	height: 83px;
+	opacity: 0;
+	border-radius: 5px;
+	margin: 8px;
+	transition: opacity 1s ease;
+}
+
+#current {
+	border: 1px solid #3B9DFF;
+}
+
+.touchpoint__content:hover .flexy--image {
+	opacity: 1;
 }
