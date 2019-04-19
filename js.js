@@ -11,6 +11,7 @@ window.onload = function() {
 	var activeArea = document.querySelectorAll('.touchpoint')
 	var contact = document.getElementById('contact-area');
 	var contactButton = document.getElementById('contact-button');
+	var screenWidth = window.innerWidth;
 
 	for (var i = grid.length - 1; i >= 0; i--){
 
@@ -70,6 +71,8 @@ window.onload = function() {
 		});
   };
 
+  console.log(screenWidth);
+
   // for each touchpoint project cover
   for (var i = touchPoint.length - 1; i >= 0; i--) {
 
@@ -84,7 +87,12 @@ window.onload = function() {
 			var friedChicken = 0;
 
 			// expand the feature section
-			this.parentElement.parentElement.parentElement.previousElementSibling.setAttribute("style", "max-height: 500px;");
+
+			if (screenWidth < 1100){
+				this.parentElement.parentElement.parentElement.previousElementSibling.setAttribute("style", "max-height: 1000px;");
+			} else {
+				this.parentElement.parentElement.parentElement.previousElementSibling.setAttribute("style", "max-height: 500px;");
+			};
 
 			// make all the touchpoints not displayed
 			for (var i = domIndex.length - 1; i >= 0; i--) {
